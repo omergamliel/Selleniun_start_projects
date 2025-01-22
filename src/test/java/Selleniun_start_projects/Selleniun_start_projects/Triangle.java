@@ -14,6 +14,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+* STUDENT 1 | Avivit Lifshin (207626896)
+* STUDENT 2 | Omer Gamliel (209052786)
+* STUDENT 3 | Heli Cohen (206719171)
+**/
 public class Triangle {
 	static WebDriver  browser;
 	
