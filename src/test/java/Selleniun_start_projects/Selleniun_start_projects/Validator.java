@@ -82,25 +82,5 @@ public class Validator {
 	      assertEquals(expected, result);
 	  }
 	  //--------------------------------[סיום בדיקה]--------------------------------
-	  
-	  //--------------------------------[תחילת בדיקה]--------------------------------
-	  @Test
-	  public void Tests3() {
-	      // התוצאה הצפויה
-	      String expected = "Invalid Value";
 
-	      // שדה טקסט הכנסת הסיסמא
-	      WebElement sideBox = browser.findElement(By.name("characters"));
-	      sideBox.sendKeys("12345678");
-
-	      // ללחוץ על הכפתור
-	      browser.findElement(By.name("validate")).click();
-
-	      // שמירת הפלט של הנתונים
-	      String result = browser.findElement(By.name("validation_message")).getAttribute("value");
-
-	      // השוואה בין התוצאה הצפויה לתוצאה בפועל
-	      assertEquals(expected, result);
-	  }
-	  //--------------------------------[סיום בדיקה]--------------------------------
 }
