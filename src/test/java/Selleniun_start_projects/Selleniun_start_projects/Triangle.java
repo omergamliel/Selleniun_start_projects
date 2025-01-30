@@ -45,7 +45,7 @@ public class Triangle {
 	  @Test
 	  public void Tests1() {
 	      // התוצאה הצפויה
-	      String expected = "Isosceles";
+	      String expected = "Error: Not a Triangle";
 
 	      // שדה ראשון
 	      WebElement sideBox = browser.findElement(By.id("side1"));
@@ -53,11 +53,11 @@ public class Triangle {
 
 	      // שדה שני
 	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("5");
+	      sideBox.sendKeys("1");
 
 	      // שדה שלישי
 	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("6");
+	      sideBox.sendKeys("1");
 
 	      // ללחוץ על הכפתור
 	      browser.findElement(By.id("identify-triangle-action")).click();
@@ -73,6 +73,64 @@ public class Triangle {
 	  //--------------------------------[תחילת בדיקה]--------------------------------
 	  @Test
 	  public void Tests2() {
+	      // התוצאה הצפויה
+	      String expected = "Error: Not a Triangle";
+
+	      // שדה ראשון
+	      WebElement sideBox = browser.findElement(By.id("side1"));
+	      sideBox.sendKeys("3");
+
+	      // שדה שני
+	      sideBox = browser.findElement(By.id("side2"));
+	      sideBox.sendKeys("8");
+
+	      // שדה שלישי
+	      sideBox = browser.findElement(By.id("side3"));
+	      sideBox.sendKeys("1");
+
+	      // ללחוץ על הכפתור
+	      browser.findElement(By.id("identify-triangle-action")).click();
+
+	      // שמירת הפלט של הנתונים
+	      String result = browser.findElement(By.id("triangle-type")).getText();
+
+	      // השוואה בין התוצאה הצפויה לתוצאה בפועל
+	      assertEquals(expected, result);
+	  }
+	  //--------------------------------[סיום בדיקה]--------------------------------
+
+	  //--------------------------------[תחילת בדיקה]--------------------------------
+	  @Test
+	  public void Tests3() {
+	      // התוצאה הצפויה
+	      String expected = "Error: Not a Triangle";
+
+	      // שדה ראשון
+	      WebElement sideBox = browser.findElement(By.id("side1"));
+	      sideBox.sendKeys("5");
+
+	      // שדה שני
+	      sideBox = browser.findElement(By.id("side2"));
+	      sideBox.sendKeys("5");
+
+	      // שדה שלישי
+	      sideBox = browser.findElement(By.id("side3"));
+	      sideBox.sendKeys("10");
+
+	      // ללחוץ על הכפתור
+	      browser.findElement(By.id("identify-triangle-action")).click();
+
+	      // שמירת הפלט של הנתונים
+	      String result = browser.findElement(By.id("triangle-type")).getText();
+
+	      // השוואה בין התוצאה הצפויה לתוצאה בפועל
+	      assertEquals(expected, result);
+	  }
+	  //--------------------------------[סיום בדיקה]--------------------------------
+
+	  //--------------------------------[תחילת בדיקה]--------------------------------
+	  @Test
+	  public void Tests4() {
 	      // התוצאה הצפויה
 	      String expected = "Equilateral";
 
@@ -101,79 +159,21 @@ public class Triangle {
 
 	  //--------------------------------[תחילת בדיקה]--------------------------------
 	  @Test
-	  public void Tests3() {
-	      // התוצאה הצפויה
-	      String expected = "Scalene";
-
-	      // שדה ראשון
-	      WebElement sideBox = browser.findElement(By.id("side1"));
-	      sideBox.sendKeys("3");
-
-	      // שדה שני
-	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("4");
-
-	      // שדה שלישי
-	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("5");
-
-	      // ללחוץ על הכפתור
-	      browser.findElement(By.id("identify-triangle-action")).click();
-
-	      // שמירת הפלט של הנתונים
-	      String result = browser.findElement(By.id("triangle-type")).getText();
-
-	      // השוואה בין התוצאה הצפויה לתוצאה בפועל
-	      assertEquals(expected, result);
-	  }
-	  //--------------------------------[סיום בדיקה]--------------------------------
-
-	  //--------------------------------[תחילת בדיקה]--------------------------------
-	  @Test
-	  public void Tests4() {
-	      // התוצאה הצפויה
-	      String expected = "Error: Not a Triangle";
-
-	      // שדה ראשון
-	      WebElement sideBox = browser.findElement(By.id("side1"));
-	      sideBox.sendKeys("3");
-
-	      // שדה שני
-	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("4");
-
-	      // שדה שלישי
-	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("1");
-
-	      // ללחוץ על הכפתור
-	      browser.findElement(By.id("identify-triangle-action")).click();
-
-	      // שמירת הפלט של הנתונים
-	      String result = browser.findElement(By.id("triangle-type")).getText();
-
-	      // השוואה בין התוצאה הצפויה לתוצאה בפועל
-	      assertEquals(expected, result);
-	  }
-	  //--------------------------------[סיום בדיקה]--------------------------------
-
-	  //--------------------------------[תחילת בדיקה]--------------------------------
-	  @Test
 	  public void Tests5() {
 	      // התוצאה הצפויה
 	      String expected = "Isosceles";
 
 	      // שדה ראשון
 	      WebElement sideBox = browser.findElement(By.id("side1"));
-	      sideBox.sendKeys("6");
+	      sideBox.sendKeys("7");
 
 	      // שדה שני
 	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("4");
+	      sideBox.sendKeys("7");
 
 	      // שדה שלישי
 	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("6");
+	      sideBox.sendKeys("8");
 
 	      // ללחוץ על הכפתור
 	      browser.findElement(By.id("identify-triangle-action")).click();
@@ -190,19 +190,19 @@ public class Triangle {
 	  @Test
 	  public void Tests6() {
 	      // התוצאה הצפויה
-	      String expected = "Scalene";
+	      String expected = "Isosceles";
 
 	      // שדה ראשון
 	      WebElement sideBox = browser.findElement(By.id("side1"));
-	      sideBox.sendKeys("5");
+	      sideBox.sendKeys("6");
 
 	      // שדה שני
 	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("8");
+	      sideBox.sendKeys("5");
 
 	      // שדה שלישי
 	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("10");
+	      sideBox.sendKeys("6");
 
 	      // ללחוץ על הכפתור
 	      browser.findElement(By.id("identify-triangle-action")).click();
@@ -223,15 +223,15 @@ public class Triangle {
 
 	      // שדה ראשון
 	      WebElement sideBox = browser.findElement(By.id("side1"));
-	      sideBox.sendKeys("12");
+	      sideBox.sendKeys("5");
 
 	      // שדה שני
 	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("8");
+	      sideBox.sendKeys("4");
 
 	      // שדה שלישי
 	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("12");
+	      sideBox.sendKeys("4");
 
 	      // ללחוץ על הכפתור
 	      browser.findElement(By.id("identify-triangle-action")).click();
@@ -248,19 +248,19 @@ public class Triangle {
 	  @Test
 	  public void Tests8() {
 	      // התוצאה הצפויה
-	      String expected = "Isosceles";
+	      String expected = "Scalene";
 
 	      // שדה ראשון
 	      WebElement sideBox = browser.findElement(By.id("side1"));
-	      sideBox.sendKeys("7");
+	      sideBox.sendKeys("3");
 
 	      // שדה שני
 	      sideBox = browser.findElement(By.id("side2"));
-	      sideBox.sendKeys("7");
+	      sideBox.sendKeys("4");
 
 	      // שדה שלישי
 	      sideBox = browser.findElement(By.id("side3"));
-	      sideBox.sendKeys("8");
+	      sideBox.sendKeys("5");
 
 	      // ללחוץ על הכפתור
 	      browser.findElement(By.id("identify-triangle-action")).click();
